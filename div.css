@@ -6,23 +6,27 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
 }
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width: 980px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
 }
 .left {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .left h1 {
     color: #1877f2;
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 .left p {
-    font-size: 20px;
+    font-size: 18px;
     color: #1c1e21;
 }
 .right {
@@ -30,7 +34,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    width: 360px;
+    width: 100%;
 }
 .input-box {
     width: 100%;
@@ -74,13 +78,16 @@ body {
 .signup-btn:hover {
     background: #36a420;
 }
-.bottom-text {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-.bottom-text a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 980px;
+        text-align: left;
+    }
+    .left {
+        width: 50%;
+    }
+    .right {
+        width: 360px;
+    }
 }
